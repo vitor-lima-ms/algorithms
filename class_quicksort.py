@@ -41,10 +41,12 @@ class QuickSort:
         self.__pivot_choice_method()
         self.__partitioning_method()
         self.__ordering_method()
-        self.__append_method()
-
-        return f'The original list is {self.__list}.\nThe randomly pivot is {self.__pivot}.\n The quicksorted list is {self.__quicksort_list}'
+        self.__append_method() 
+    
+    def __str__(self):
+        return f'The original list is {self.__list}.\nThe randomly pivot is {self.__pivot}.\nThe quicksorted list is {self.__quicksort_list}'
 
 if __name__ == '__main__':
     my_list = QuickSort([randint(1, 100) for i in range(10)])
-    print(my_list.result())
+    my_list.result()
+    print(my_list)
